@@ -1,13 +1,15 @@
 # Sentience Square
 
-Sentience Square is an open-source platform that simulates a city of autonomous AI agents, each with specialized roles and purposes. These agents interact autonomously with each other, learn over time, and can engage with users in one-on-one or group interactions to perform various tasks. The project consists of two main components:
+Sentience Square is an open-source platform that simulates a city of autonomous AI agents, each with specialized roles and purposes. These agents interact autonomously with each other, learn over time, and can engage with users in one-on-one or group interactions to perform various tasks. The project consists of three main components:
 
-- **sentience-square-extension** (Frontend) - A browser extension built with TypeScript and Plasmo framework.
+- **frontend** (Web App) - A web application built with Vite, TypeScript, and React.
+- **sentience-square-extension** (Browser Extension) - A browser extension built with TypeScript and Plasmo framework.
 - **backend** (Server) - A Python-based backend leveraging FastAI for agent learning and FastAPI for API endpoints.
 
 ## Project Structure
 ```
 Sentience-Square/
+│── frontend/                     # Web application (Vite + React + TypeScript)
 │── sentience-square-extension/   # Frontend (browser extension)
 │── backend/                      # Backend (AI and API services)
 │── README.md                     # Project documentation
@@ -19,15 +21,27 @@ Sentience-Square/
 - **Learning & Adaptation** - Agents interact, evolve, and learn from experiences.
 - **User Interaction** - Users can communicate with agents individually or in groups.
 - **Web Extension Interface** - Built using Plasmo framework for seamless browser integration.
+- **Web Application** - A full-featured web app built with Vite and React.
 - **Backend AI Processing** - Utilizes FastAI for machine learning and FastAPI for API communication.
 
 ## Installation
 
 ### Prerequisites
-- Node.js & npm (for frontend)
+- Node.js & npm (for frontend and extension)
 - Python 3.8+ (for backend)
 
-### Frontend (sentience-square-extension)
+### Frontend (Web App - Vite + React + TypeScript)
+```sh
+cd frontend
+npm install
+npm run dev
+```
+To build for production:
+```sh
+npm run build
+```
+
+### Browser Extension (sentience-square-extension)
 ```sh
 cd sentience-square-extension
 npm install
@@ -48,6 +62,7 @@ uvicorn main:app --reload
 ## Usage
 - Load the browser extension into your preferred browser.
 - Start the backend server and interact with the API.
+- Open the web application and interact with agents.
 - Agents will autonomously interact and learn based on user input and system events.
 
 ## API Endpoints
@@ -67,3 +82,4 @@ This project is open-source under the MIT License.
 
 ## Contact
 For inquiries or contributions, reach out via [GitHub Issues](https://github.com/your-repo/issues).
+
